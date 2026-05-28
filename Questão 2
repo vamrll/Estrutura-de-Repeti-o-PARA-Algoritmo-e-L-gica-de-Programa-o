@@ -1,0 +1,35 @@
+programa {
+  funcao inicio() {
+
+    inteiro i, idade, maiorIdade, quantidade
+    caracter sexo, olhos, cabelos
+
+    maiorIdade = 0
+    quantidade = 0
+
+    para (i = 1; i <= 500; i++) {
+      escreva("\nSexo M/F: ")
+      leia(sexo)
+
+      escreva("Cor dos olhos A/V/C: ")
+      leia(olhos)
+
+      escreva("Cor dos cabelos L/C/P: ")
+      leia(cabelos)
+
+      escreva("Idade: ")
+      leia(idade)
+
+      se (idade > maiorIdade) {
+        maiorIdade = idade
+      }
+
+      se (sexo == 'F' e idade >= 18 e idade <= 35 e olhos == 'V' e cabelos == 'L') {
+        quantidade = quantidade + 1
+      }
+    }
+
+    escreva("\nMaior idade do grupo: ", maiorIdade)
+    escreva("\nQuantidade de mulheres entre 18 e 35 anos, olhos verdes e cabelos louros: ", quantidade)
+  }
+}
