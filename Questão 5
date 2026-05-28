@@ -1,0 +1,52 @@
+programa {
+  funcao inicio() {
+
+    inteiro i, voto
+    inteiro c1, c2, c3, c4, nulo, branco
+
+    c1 = 0
+    c2 = 0
+    c3 = 0
+    c4 = 0
+    nulo = 0
+    branco = 0
+
+    para (i = 1; i <= 100; i++) {
+      escreva("\nDigite o voto: ")
+      leia(voto)
+
+      escolha (voto) {
+        caso 1:
+          c1 = c1 + 1
+          pare
+        caso 2:
+          c2 = c2 + 1
+          pare
+        caso 3:
+          c3 = c3 + 1
+          pare
+        caso 4:
+          c4 = c4 + 1
+          pare
+        caso 5:
+          nulo = nulo + 1
+          pare
+        caso 6:
+          branco = branco + 1
+          pare
+        caso 0:
+          i = 100
+          pare
+        caso contrario:
+          escreva("Voto inválido!")
+      }
+    }
+
+    escreva("\nCandidato 1: ", c1)
+    escreva("\nCandidato 2: ", c2)
+    escreva("\nCandidato 3: ", c3)
+    escreva("\nCandidato 4: ", c4)
+    escreva("\nVotos nulos: ", nulo)
+    escreva("\nVotos em branco: ", branco)
+  }
+}
