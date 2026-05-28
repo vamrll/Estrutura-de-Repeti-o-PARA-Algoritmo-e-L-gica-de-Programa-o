@@ -1,0 +1,41 @@
+programa {
+  funcao inicio() {
+
+    inteiro i, filhos, totalPessoas, qtdSalarioAte100
+    real salario, somaSalario, somaFilhos, maiorSalario, mediaSalario, mediaFilhos, percentual
+
+    totalPessoas = 5
+    somaSalario = 0
+    somaFilhos = 0
+    maiorSalario = 0
+    qtdSalarioAte100 = 0
+
+    para (i = 1; i <= totalPessoas; i++) {
+      escreva("\nDigite o salário: ")
+      leia(salario)
+
+      escreva("Digite o número de filhos: ")
+      leia(filhos)
+
+      somaSalario = somaSalario + salario
+      somaFilhos = somaFilhos + filhos
+
+      se (salario > maiorSalario) {
+        maiorSalario = salario
+      }
+
+      se (salario <= 100) {
+        qtdSalarioAte100 = qtdSalarioAte100 + 1
+      }
+    }
+
+    mediaSalario = somaSalario / totalPessoas
+    mediaFilhos = somaFilhos / totalPessoas
+    percentual = (qtdSalarioAte100 * 100) / totalPessoas
+
+    escreva("\nMédia salarial: R$ ", mediaSalario)
+    escreva("\nMédia de filhos: ", mediaFilhos)
+    escreva("\nMaior salário: R$ ", maiorSalario)
+    escreva("\nPercentual com salário até R$100,00: ", percentual, "%")
+  }
+}
