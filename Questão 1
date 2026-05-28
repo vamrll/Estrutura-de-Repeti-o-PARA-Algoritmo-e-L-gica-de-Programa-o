@@ -1,0 +1,52 @@
+programa {
+  funcao inicio() {
+
+    inteiro i, matricula, opcao
+    real nota
+    cadeia conceito
+
+    para (i = 1; i <= 75; i++) {
+      escreva("\n Matrícula do aluno: ")
+      leia(matricula)
+
+      escreva("Digite a nota final: ")
+      leia(nota)
+
+      se (nota >= 0 e nota <= 4.9) {
+        opcao = 1
+      } senao
+      se (nota >= 5 e nota <= 6.9) {
+        opcao = 2
+      } senao
+      se (nota >= 7 e nota <= 8.9) {
+        opcao = 3
+      } senao
+      se (nota >= 9 e nota <= 10) {
+        opcao = 4
+      } senao {
+        opcao = 0
+      }
+
+      escolha (opcao) {
+        caso 1:
+          conceito = "D"
+          pare
+        caso 2:
+          conceito = "C"
+          pare
+        caso 3:
+          conceito = "B"
+          pare
+        caso 4:
+          conceito = "A"
+          pare
+        caso contrario:
+          conceito = "Nota inválida"
+      }
+
+      escreva("\nMatrícula: ", matricula)
+      escreva("\nNota: ", nota)
+      escreva("\nConceito: ", conceito, "\n")
+    }
+  }
+}
