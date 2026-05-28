@@ -1,0 +1,19 @@
+programa {
+  funcao inicio() {
+
+    inteiro anos
+    real chico, ze
+
+    chico = 1.50
+    ze = 1.10
+    anos = 0
+
+    enquanto (ze <= chico) {
+      chico = chico + 0.02
+      ze = ze + 0.03
+      anos = anos + 1
+    }
+
+    escreva("Serão necessários ", anos, " anos para Zé ser maior que Chico.")
+  }
+}
